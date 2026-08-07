@@ -68,6 +68,46 @@ p, h1, h2, h3, h4, h5, h6 {
 --gray-100: hsl(220, 16%, 96%);
 --gray-50: hsl(0, 0%, 98%);
 --white: hsl(0, 100%, 100%);
---main-font: 1.13rem;  /* 18 px*/
+--main-font-size: 1.13rem;  /* 18 px*/
+--main-ff: "Public Sans", sans-serif;;
+}
+
+body {
+    background-color: var(--gray-100);
+    font-size: var(--main-font);
+    font-family: var(--main-ff);
+
 
 }
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.mobile-menu {
+  width: 300px;
+  height: 13rem;
+  background-color: var(--white);
+  position: relative;
+  z-index: 1000;
+  display: none;
+  left: 110px;
+  top: 10px;
+  padding-top: 1rem;
+}
+
+@media (min-width: 40rem) {
+  /* change the min-width size after completed for desktop */
+  
+body {
+  background-color: red;
+}
+
+.mobile-menu {
+  display: none;
+}
+ }  
