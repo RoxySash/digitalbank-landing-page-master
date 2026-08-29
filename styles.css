@@ -107,12 +107,12 @@ body {
 .desktop-imagebg {
   display: none;
 }
-@media (min-width: 40rem) {
+@media (min-width: 20rem) {
   /* change the min-width size after completed for desktop */
   
 body {
-  
-  position: relative;
+ 
+  position: absolute;
 }
 
 .openbtn {
@@ -125,7 +125,8 @@ body {
 .desktop-imagebg {
   top: 0;
   right: 301;
-  position: absolute;
+  position: relative;
+  z-index: -1;
 
 }
 
