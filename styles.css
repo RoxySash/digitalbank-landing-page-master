@@ -100,14 +100,34 @@ body {
   padding-top: 1rem;
 }
 
+.desktopMenu {
+  display: none;
+}
+
+.desktop-imagebg {
+  display: none;
+}
 @media (min-width: 40rem) {
   /* change the min-width size after completed for desktop */
   
 body {
-  background-color: red;
+  
+  position: relative;
 }
 
+.openbtn {
+  display: none;
+}
 .mobile-menu {
   display: none;
 }
+
+.desktop-imagebg {
+  top: 0;
+  right: 301;
+  position: absolute;
+
+}
+
+
  }  
