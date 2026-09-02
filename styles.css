@@ -87,6 +87,9 @@ body {
   align-items: center;
 }
 
+header {
+  z-index: 1000;
+}
 
 .mobile-menu {
   width: 300px;
@@ -100,19 +103,21 @@ body {
   padding-top: 1rem;
 }
 
-.desktopMenu {
+.desktop-menu {
   display: none;
 }
 
 .desktop-imagebg {
   display: none;
 }
-@media (min-width: 20rem) {
+
+
+@media (min-width: 40rem) {
   /* change the min-width size after completed for desktop */
   
 body {
- 
-  position: absolute;
+
+position: absolute;
 }
 
 .openbtn {
@@ -123,10 +128,10 @@ body {
 }
 
 .desktop-imagebg {
-  top: 0;
-  right: 301;
+  display: block;
+ right: -50;
   position: relative;
-  z-index: -1;
+ 
 
 }
 

@@ -1,4 +1,4 @@
-const mobileMenu = document.getElementById("mobileMenu");
+
 const hamburgerBtn = document.getElementById("openBtn");
 
 hamburgerBtn.addEventListener("click", () => {
