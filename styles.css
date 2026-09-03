@@ -76,6 +76,7 @@ body {
     background-color: var(--gray-100);
     font-size: var(--main-font);
     font-family: var(--main-ff);
+   
 
 
 }
@@ -88,7 +89,8 @@ body {
 }
 
 header {
-  z-index: 1000;
+  z-index: 3000;
+  padding: 1.2rem;
 }
 
 .mobile-menu {
@@ -101,6 +103,22 @@ header {
   left: 110px;
   top: 10px;
   padding-top: 1rem;
+  
+}
+.openbtn {
+  display: flex;
+  cursor: pointer;
+  color: var(--gray-600);
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+
+}
+
+.gray-text {
+  color: var(--gray-600);
 }
 
 .desktop-menu {
@@ -111,6 +129,54 @@ header {
   display: none;
 }
 
+.desktop-hero-btn {
+  display: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+
+}
+
+.flexcenter {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 1rem;
+}
+
+.hero {
+text-align: center;
+background-color: var(--white);
+padding-bottom: 2rem;
+
+}
+
+.hero-bottom {
+  margin: 2rem;
+
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--blue-950);
+  line-height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  position: absolute;
+}
+
+.hero-image-front {
+  z-index: 2000;
+  position: relative;
+  top: 200;
+  overflow: hidden;
+}
 
 @media (min-width: 40rem) {
   /* change the min-width size after completed for desktop */
@@ -135,5 +201,12 @@ position: absolute;
 
 }
 
+.desktop-hero-btn {
+  display: block;
+}
+
+.hero-image {
+  display: none;
+}
 
  }  
