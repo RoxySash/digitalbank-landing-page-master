@@ -1,10 +1,11 @@
-
 /* ------------------- */
 /* Reset               */
 /* ------------------- */
 
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -26,29 +27,39 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
- 
-	
 }
 
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-
 /* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -60,25 +71,22 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
---blue-950: hsl(233, 26%, 24%);
---green-500: hsl(136, 64%, 51%);
---cyan-400: hsl(192, 69%, 51%);
+  --blue-950: hsl(233, 26%, 24%);
+  --green-500: hsl(136, 64%, 51%);
+  --cyan-400: hsl(192, 69%, 51%);
 
---gray-600: hsl(233, 8%, 62%);
---gray-100: hsl(220, 16%, 96%);
---gray-50: hsl(0, 0%, 98%);
---white: hsl(0, 100%, 100%);
---main-font-size: 1.13rem;  /* 18 px*/
---main-ff: "Public Sans", sans-serif;;
+  --gray-600: hsl(233, 8%, 62%);
+  --gray-100: hsl(220, 16%, 96%);
+  --gray-50: hsl(0, 0%, 98%);
+  --white: hsl(0, 100%, 100%);
+  --main-font-size: 1.13rem; /* 18 px*/
+  --main-ff: "Public Sans", sans-serif;
 }
 
 body {
-    background-color: var(--gray-100);
-    font-size: var(--main-font);
-    font-family: var(--main-ff);
-   
-
-
+  background-color: var(--gray-100);
+  font-size: var(--main-font);
+  font-family: var(--main-ff);
 }
 
 .flexrow {
@@ -87,10 +95,17 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 header {
   z-index: 3000;
   padding: 1.2rem;
+  height: 50px;
 }
 
 .mobile-menu {
@@ -98,27 +113,45 @@ header {
   height: 13rem;
   background-color: var(--white);
   position: relative;
-  z-index: 1000;
+  z-index: 4000;
   display: none;
-  left: 110px;
-  top: 10px;
+  left: -120px;
+  right: 120px;
+  top: 150px;
   padding-top: 1rem;
-  
+  color: var(--blue-950);
 }
+.list-menu-mobile {
+  list-style-type: none;
+}
+
 .openbtn {
   display: flex;
   cursor: pointer;
   color: var(--gray-600);
 }
 
-ul li a {
+ul li {
   display: block;
   text-decoration: none;
+  text-align: center;
+}
 
+a {
+  text-decoration: none;
 }
 
 .gray-text {
   color: var(--gray-600);
+  line-height: 120%;
+}
+
+.article-title {
+  font-weight: normal;
+  color: var(--blue-950);
+  font-size: 1.1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.4rem;
 }
 
 .med-font {
@@ -146,27 +179,24 @@ button {
   width: 160px;
   color: var(--white);
   font-weight: 600;
-
 }
 
 .flexcenter {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .hero {
-text-align: center;
-background-color: var(--white);
-padding-bottom: 2rem;
-
+  text-align: center;
+  background-color: var(--white);
+  padding-bottom: 2rem;
 }
 
 .hero-bottom {
   margin: 2rem;
-
 }
 
 .hero-title {
@@ -174,6 +204,18 @@ padding-bottom: 2rem;
   font-weight: 300;
   color: var(--blue-950);
   line-height: 100%;
+}
+
+.apps-images {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.benefit-title {
+  color: var(--blue-950);
+}
+
+.topspace {
+  margin-top: 1.6rem;
 }
 
 .hero-image {
@@ -190,50 +232,94 @@ padding-bottom: 2rem;
 
 .benefit-section {
   margin: 4rem 2rem;
-
+  text-align: center;
 }
 
-h1, h2, h3 {
+.article-section {
+  background-color: var(--gray-50); /* not sure about this color */
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
   color: var(--blue-950);
   font-weight: 400;
 }
 
+.article-bottom {
+  background-color: var(--white);
+  text-align: left;
+  margin: 2rem;
+}
+
+.article-text {
+  padding: 2rem;
+}
+
+.image-radius {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bordersmall {
+  border-radius: 10px;
+}
+.author-name {
+  font-size: 0.77rem;
+  color: var(--gray-600);
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.footer-links {
+  color: var(--white);
+  padding: 0;
+}
 
 footer {
   background-color: var(--blue-950);
   width: 100%;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   /* change the min-width size after completed for desktop */
-  
-body {
 
-position: absolute;
+  body {
+    position: absolute;
+  }
+
+  .openbtn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-imagebg {
+    display: block;
+
+    position: relative;
+  }
+
+  .desktop-hero-btn {
+    display: block;
+  }
+
+  .hero-image {
+    display: none;
+  }
 }
-
-.openbtn {
-  display: none;
-}
-.mobile-menu {
-  display: none;
-}
-
-.desktop-imagebg {
-  display: block;
- 
-  position: relative;
- 
-
-}
-
-.desktop-hero-btn {
-  display: block;
-}
-
-.hero-image {
-  display: none;
-}
-
- }  
