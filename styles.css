@@ -136,6 +136,12 @@ ul li a {
 button {
   border: none;
   cursor: pointer;
+  background: linear-gradient(var(--green-500), var(--cyan-400));
+  padding: 0.7rem;
+  border-radius: 30px;
+  width: 160px;
+  color: var(--white);
+  font-weight: 600;
 
 }
 
@@ -176,6 +182,12 @@ padding-bottom: 2rem;
   position: relative;
   top: 200;
   overflow: hidden;
+}
+
+footer {
+  background-color: var(--blue-950);
+  width: 100%;
+  padding: 2rem;
 }
 
 @media (min-width: 40rem) {
