@@ -59,5 +59,5 @@ Do more intermediate projects. Will incorporate React in my next project and CSS
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/RoxySash)
+- Frontend Mentor - [@RoxySash](https://www.frontendmentor.io/profile/RoxySash)
 
