@@ -20,9 +20,11 @@ body {
   /* 4. Improve centering within parent */
   min-height: 100vh;
   background-color: var(--neutral-white);
-  font-size: clamp(0.45rem, 2.5vw, 0.9rem);
-  font-family: var(--font-main);
+  font-size: clamp(var(--main-font-size), 2.5vw, 0.9rem);
 
+  background-color: var(--gray-100);
+
+  font-family: var(--main-ff);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -79,14 +81,8 @@ h6 {
   --gray-100: hsl(220, 16%, 96%);
   --gray-50: hsl(0, 0%, 98%);
   --white: hsl(0, 100%, 100%);
-  --main-font-size: 1.13rem; /* 18 px*/
+  --main-font-size: 0.98rem; /* 18 px*/
   --main-ff: "Public Sans", sans-serif;
-}
-
-body {
-  background-color: var(--gray-100);
-  font-size: var(--main-font);
-  font-family: var(--main-ff);
 }
 
 .flexrow {
@@ -196,6 +192,14 @@ button {
   font-weight: 600;
 }
 
+button:hover {
+   opacity: 0.5;
+}
+
+.link:hover {
+  color: var(--cyan-400);
+}
+
 .flexcenter {
   display: flex;
   flex-direction: column;
@@ -203,13 +207,22 @@ button {
   align-items: center;
   gap: 1rem;
 }
-
+a{
+  position: relative;
+}
+.links-mobile:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  border: 2px solid var(--cyan-400);
+}
 .navbar {
   text-align: center;
   background-color: var(--white);
   padding-bottom: 2rem;
   padding-top: 1.5rem;
- 
 }
 
 .hero-bottom {
@@ -417,7 +430,9 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 1.5rem;
   }
+
   .articles-desktop {
     display: flex;
     flex-direction: row;
@@ -454,8 +469,8 @@ footer {
   .textlength {
     width: 50%;
   }
-  .navbar{
-     padding-left: 8rem;
-  padding-right: 8rem;
+  .navbar {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
