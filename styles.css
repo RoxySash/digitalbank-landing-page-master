@@ -122,7 +122,6 @@ header {
   border-radius: 10px;
   padding-top: 3rem;
   box-shadow: 0px 10px 70px #454444;
-  
 }
 
 .list-menu-mobile {
@@ -189,7 +188,8 @@ button {
   border: none;
   cursor: pointer;
   background: linear-gradient(var(--green-500), var(--cyan-400));
-  padding: 0.7rem;
+  height: 35px;
+  font-size: 0.87rem;
   border-radius: 30px;
   width: 160px;
   color: var(--white);
@@ -204,14 +204,17 @@ button {
   gap: 1rem;
 }
 
-.hero {
+.navbar {
   text-align: center;
   background-color: var(--white);
   padding-bottom: 2rem;
+  padding-top: 1.5rem;
+ 
 }
 
 .hero-bottom {
   margin: 2rem;
+  text-align: center;
 }
 
 .hero-title {
@@ -281,6 +284,10 @@ h3 {
 .bordersmall {
   border-radius: 10px;
 }
+.latest-article-title {
+  padding-top: 2rem;
+  text-align: center;
+}
 .author-name {
   font-size: 0.77rem;
   color: var(--gray-600);
@@ -297,7 +304,10 @@ h3 {
 
 .footer-links {
   color: var(--white);
-  padding: 0;
+  padding-top: 1rem;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 1rem;
   text-align: center;
   list-style-type: none;
 }
@@ -315,8 +325,18 @@ footer {
 @media (min-width: 50rem) {
   /* change the min-width size after completed for desktop */
 
-  body {
-    position: absolute;
+  .container {
+    position: relative;
+  }
+  .flexcenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .lefttext {
+    text-align: left;
   }
 
   .openbtn {
@@ -329,14 +349,30 @@ footer {
   .mobile-menu {
     display: none;
   }
+  .desktop-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-menu-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
   .desktop-imagebg {
     display: block;
-    top: 0;
-    right: 50px;
+    top: 9px;
+    right: 10px;
     position: absolute;
   }
-
+  .latest-article-title {
+    text-align: left;
+    margin-left: 8rem;
+  }
   .desktop-hero-btn {
     display: block;
   }
@@ -344,10 +380,82 @@ footer {
   .hero-image {
     display: none;
   }
+
   .hero {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .hero-bottom {
+    text-align: left;
+    width: 30%;
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .benefit-desktop-title {
+    text-align: left;
+    justify-content: left;
+  }
+
+  .benefit-section {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .leftpadding {
+    padding-left: 1rem;
+  }
+  .digital-benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .articles-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5.99rem;
+    margin-right: 5.99rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 4rem;
+  }
+
+  .flexcol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .textlength {
+    width: 50%;
+  }
+  .navbar{
+     padding-left: 8rem;
+  padding-right: 8rem;
   }
 }
