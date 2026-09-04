@@ -193,7 +193,7 @@ button {
 }
 
 button:hover {
-   opacity: 0.5;
+  opacity: 0.5;
 }
 
 .link:hover {
@@ -207,7 +207,7 @@ button:hover {
   align-items: center;
   gap: 1rem;
 }
-a{
+a {
   position: relative;
 }
 .links-mobile:hover::after {
