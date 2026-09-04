@@ -459,6 +459,12 @@ footer {
     text-align: left;
     gap: 4rem;
   }
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .flexcol {
     display: flex;
