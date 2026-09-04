@@ -451,19 +451,13 @@ footer {
     padding-right: 8rem;
   }
 
-  .footer-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    gap: 4rem;
-  }
   .column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding-right: 4rem;
   }
 
   .flexcol {
@@ -472,6 +466,11 @@ footer {
     justify-content: flex-end;
     align-items: flex-end;
   }
+  .toleftcenter {
+    display: flex;
+    flex-direction: row;
+  }
+
   .textlength {
     width: 50%;
   }
